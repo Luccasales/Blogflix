@@ -9,7 +9,7 @@ const FormInput =  ({label,name, email,type,value,onChange}) =>{
             value={value}
             type={type}
             onChange={onChange} 
-            className="border rounded p2 w-full"
+            className="border rounded p2 w-60"
             required
             />
         </div>

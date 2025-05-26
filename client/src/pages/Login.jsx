@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import FormInput from '../components/FormInput'
 
 const Login = () => {
-  const [form,setFormData] = useState({
+  const [formData,setFormData] = useState({
     email:'',
     senha:'',
   });
@@ -18,21 +18,27 @@ const Login = () => {
     <div>
       <Link to= "/">Voltar</Link>
     </div>
-    <div>
+    <div className='min-h-screen flex flex-col items-center justify-center p-10'>
       <FormInput
     label= "Email ou Nome"
     name="nome"
     type="text"
-    value={FormData.nome}
-    onChange={handleChange} />
+    value={formData.nome}
+    onChange={handleChange}
+    />
+
     <FormInput
     label="Senha"
     name="senha"
     type="password"
-    value={FormData.passoword} 
-    onChange={handleChange} />
+    value={formData.passoword} 
+    onChange={handleChange} 
+    />
 
-    <button>Entrar</button>
+    <button
+    type='submit'
+    className='mt-4 bg-gray-400 p-3 cursor-pointer hover:bg-gray-700 transition'>Entrar</button>
+    <p>Voce não tem conta? <Link to={"/register"} className='bg-blue-400 hover:bg-blue-700 transition'>Clique aqui para registar</Link></p>
     </div>
     
     </>
