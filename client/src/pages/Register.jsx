@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form, Link } from 'react-router-dom'
 import FormInput from '../components/FormInput'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
 
@@ -11,6 +12,9 @@ const [formData, setFormData] = useState({
   confirmPassword: '',
   date: '',
 })
+
+const navigate = useNavigate();
+
   const handleSubmit = async (e) =>{
     e.preventDefault();
 
@@ -28,7 +32,7 @@ const [formData, setFormData] = useState({
   }
 
   try {
-    const response = await fetch("http://localhost:5000/api/register", {
+    const response = await fetch("http://localhost:5000/api/users/register", {
       method:"POST",
       headers: {
         "Content-Type": "application/json"
@@ -40,6 +44,16 @@ const [formData, setFormData] = useState({
 
     if(response.ok){
       alert("O cadastro foi realizado com sucesso.Seja bem vindo!")
+      
+      setFormData({
+        nome: '',
+        email: '',
+        password: '',
+        confirmPassword: '',
+        date: '',
+      })
+      navigate("/login")
+      
     }else{
       alert(data.message || "Erro no cadastro,tente novamente mais tarde!")
     }
