@@ -12,6 +12,7 @@ const Home = () =>{
         className="bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">Fazer Login</Link>
         <Link to= "/register"
         className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Cadastrar</Link>
+        <Link to= '/Posts'>posts</Link>
       </div>
     </div>
     )

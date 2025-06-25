@@ -5,6 +5,9 @@ import Login from '../src/pages/Login'
 import Register from '../src/pages/Register'
 import Navbar from './components/Navbar'
 import Posts from './pages/Posts'
+import CreatePost from './pages/CreatePost'
+import PostDetail from './pages/PostDetail'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -17,6 +20,9 @@ function App() {
         <Route path = "/login" element = {<Login />} />
         <Route path = "/register" element = {<Register />} />
         <Route path="/posts" element = {<Posts />} />
+        <Route path="/criarpost" element = {<CreatePost />} />
+        <Route path="/posts/:id" element={<PostDetail />} />
+        <Route path='/dashboard' element = {<Dashboard />} />
       </Routes>
     </BrowserRouter>
      
