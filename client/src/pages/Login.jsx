@@ -54,6 +54,7 @@ const Login = () => {
     type="text"
     value={formData.email}
     onChange={handleChange}
+    className= ''
     />
 
     <FormInput
@@ -62,11 +63,12 @@ const Login = () => {
     type="password"
     value={formData.password} 
     onChange={handleChange} 
+    className = ''
     />
 
     <button
     type='submit'
-    className='mt-4 bg-gray-400 p-3 cursor-pointer hover:bg-gray-700 transition'>Entrar</button>
+    className='mt-4 bg-green-600 py-1 cursor-pointer hover:bg-green-700 transition rounded px-45'>Entrar</button>
       <p>Voce não tem conta? <Link to={"/register"} className='bg-blue-400 hover:bg-blue-700 transition'>Clique aqui para registar</Link></p>
       </form>
     </div>

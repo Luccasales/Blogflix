@@ -93,9 +93,9 @@ const CreatePost = () => {
       onChange={handleChange}
       />
 
-      <div>
-        <button onClick={handleSubmit} className='cursor-pointer bg-green-400'>Criar post</button>
-        <button onClick={handleClean} className='cursor-pointer bg-gray-400'>Limpar</button>
+      <div className='flex gap-4'>
+        <button onClick={handleSubmit} className='cursor-pointer bg-green-400 p-1 w-30 rounded hover:bg-green-600'>Criar post</button>
+        <button onClick={handleClean} className='cursor-pointer bg-gray-400 p-1 w-30 rounded hover:bg-gray-600'>Limpar</button>
       </div>
       
     </div>

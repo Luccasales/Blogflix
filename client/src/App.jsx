@@ -8,12 +8,14 @@ import Posts from './pages/Posts'
 import CreatePost from './pages/CreatePost'
 import PostDetail from './pages/PostDetail'
 import Dashboard from './pages/Dashboard'
+import { SearchProvider } from './Context/SearchContext'
 
 function App() {
 
 
   return (
     <BrowserRouter>
+      <SearchProvider>
       <Navbar />
       <Routes>
         <Route path = "/" element = {<Home />} />
@@ -24,6 +26,7 @@ function App() {
         <Route path="/posts/:id" element={<PostDetail />} />
         <Route path='/dashboard' element = {<Dashboard />} />
       </Routes>
+      </SearchProvider>
     </BrowserRouter>
      
     
